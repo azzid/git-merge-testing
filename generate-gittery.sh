@@ -4,7 +4,7 @@ mkdir repo.git
 cd repo.git
 git init --bare
 cd ..
-for dev in main second teritiary; do
+for dev in main secondary teritiary; do
   git clone repo.git
   mv repo ${dev}-dev
 done
@@ -17,7 +17,7 @@ for x in {1..5}; do
 done
 git push
 cd ..
-for dev in main second teritiary; do
+for dev in main secondary teritiary; do
   cd ${dev}-dev
   git pull
   git checkout -b ${dev}-dev
@@ -29,7 +29,7 @@ for dev in main second teritiary; do
   done
   cd ..
 done
-for dir in repo.git main-dev second-dev  teritiary-dev; do
+for dir in repo.git main-dev secondary-dev  teritiary-dev; do
   cd $dir
   echo $dir:
   git log --oneline --graph --all

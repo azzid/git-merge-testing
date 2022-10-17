@@ -16,7 +16,7 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 user@host:~/git$ cd git-merge-testing/
 user@host:~/git/git-merge-testing$ chmod u+x generate-gittery.sh
 user@host:~/git/git-merge-testing$ ./generate-gittery.sh
-Initialized empty Git repository in /home/matfra/git/git-merge-testing/repo.git/
+Initialized empty Git repository in /home/user/git/git-merge-testing/repo.git/
 Cloning into 'repo'...
 warning: You appear to have cloned an empty repository.
 done.
@@ -43,7 +43,7 @@ Delta compression using up to 8 threads
 Compressing objects: 100% (5/5), done.
 Writing objects: 100% (15/15), 987 bytes | 329.00 KiB/s, done.
 Total 15 (delta 1), reused 0 (delta 0), pack-reused 0
-To /home/matfra/git/git-merge-testing/repo.git
+To /home/user/git/git-merge-testing/repo.git
  * [new branch]      main -> main
 Already up to date.
 Switched to a new branch 'main-dev'
@@ -62,26 +62,26 @@ remote: Counting objects: 100% (15/15), done.
 remote: Compressing objects: 100% (5/5), done.
 remote: Total 15 (delta 1), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (15/15), 967 bytes | 120.00 KiB/s, done.
-From /home/matfra/git/git-merge-testing/repo
+From /home/user/git/git-merge-testing/repo
  * [new branch]      main       -> origin/main
-Switched to a new branch 'second-dev'
-[second-dev dcb5b0c] second: 11
+Switched to a new branch 'secondary-dev'
+[secondary-dev dcb5b0c] secondary: 11
  1 file changed, 1 insertion(+)
- create mode 100644 second
-[second-dev 0e7d51e] second: 12
+ create mode 100644 secondary
+[secondary-dev 0e7d51e] secondary: 12
  1 file changed, 1 insertion(+), 1 deletion(-)
-[second-dev 4db0f44] second: 13
+[secondary-dev 4db0f44] secondary: 13
  1 file changed, 1 insertion(+), 1 deletion(-)
-[second-dev 24cbb80] second: 14
+[secondary-dev 24cbb80] secondary: 14
  1 file changed, 1 insertion(+), 1 deletion(-)
-[second-dev 217d467] second: 15
+[secondary-dev 217d467] secondary: 15
  1 file changed, 1 insertion(+), 1 deletion(-)
 remote: Enumerating objects: 15, done.
 remote: Counting objects: 100% (15/15), done.
 remote: Compressing objects: 100% (5/5), done.
 remote: Total 15 (delta 1), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (15/15), 967 bytes | 161.00 KiB/s, done.
-From /home/matfra/git/git-merge-testing/repo
+From /home/user/git/git-merge-testing/repo
  * [new branch]      main       -> origin/main
 Switched to a new branch 'teritiary-dev'
 [teritiary-dev fc68afd] teritiary: 16
@@ -112,12 +112,12 @@ main-dev:
 * 31fa61e 3
 * 0b31f24 2
 * b534f4c 1
-second-dev:
-* 217d467 (HEAD -> second-dev) second: 15
-* 24cbb80 second: 14
-* 4db0f44 second: 13
-* 0e7d51e second: 12
-* dcb5b0c second: 11
+secondary-dev:
+* 217d467 (HEAD -> secondary-dev) secondary: 15
+* 24cbb80 secondary: 14
+* 4db0f44 secondary: 13
+* 0e7d51e secondary: 12
+* dcb5b0c secondary: 11
 * b08f844 (origin/main, main) 5
 * 8987863 4
 * 31fa61e 3
@@ -146,13 +146,13 @@ user@host:~/git/git-merge-testing/main-dev$ git log --oneline --graph --all
 | * 5d81ef5 teritiary: 18
 | * e896803 teritiary: 17
 | * fc68afd teritiary: 16
-* |   b5b6e77 Merge branch 'second-dev'
+* |   b5b6e77 Merge branch 'secondary-dev'
 |\ \  
-| * | 217d467 second: 15
-| * | 24cbb80 second: 14
-| * | 4db0f44 second: 13
-| * | 0e7d51e second: 12
-| * | dcb5b0c second: 11
+| * | 217d467 secondary: 15
+| * | 24cbb80 secondary: 14
+| * | 4db0f44 secondary: 13
+| * | 0e7d51e secondary: 12
+| * | dcb5b0c secondary: 11
 | |/  
 * | dfa5835 main: 10
 * | 75f1ba4 main: 9
