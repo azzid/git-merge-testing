@@ -13,7 +13,7 @@ for x in {1..5}; do
   ((i+=1))
   echo "$i" > main
   git add main
-  git commit -m "$i"
+  git commit -m "$i" --author="Main dev <maindev@pretend.co>"
 done
 git push
 cd ..
@@ -25,13 +25,14 @@ for dev in main secondary teritiary; do
     ((i+=1))
     echo "$i" > $dev
     git add $dev
-    git commit -m "$dev: $i"
+    git commit -m "$dev: $i" --author="${dev^} dev <${dev}dev@pretend.co>"
   done
   cd ..
 done
 for dir in repo.git main-dev secondary-dev  teritiary-dev; do
+  echo -e "\n"
   cd $dir
   echo $dir:
-  git log --oneline --graph --all
+  git --no-pager log --all --graph --format=format:'%C(bold blue)%h%C(reset) - %C(cyan)%an <%ae>%C(reset) - %s%C(bold green)%d%C(reset)'
   cd ..
 done
